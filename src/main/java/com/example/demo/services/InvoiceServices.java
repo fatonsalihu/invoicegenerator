@@ -24,7 +24,7 @@ public class InvoiceServices {
                         invoices.add(new Invoice());
                     }
                     int amount = invoices.get(index).howManyProductPerPrice(p);
-                    if(amount==0 ){
+                    if(amount==0 || invoices.get(index).getTotal()>=500){
                         index++;
                         continue;
                     }
